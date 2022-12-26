@@ -1,0 +1,82 @@
+<template>
+    <element-border animation="top" :height="720">
+        <el-row style="border-bottom: 1px aqua solid">
+            <el-col :span="12">
+                <p class="p-component">加氢站</p>
+            </el-col>
+            <el-col :span="6">
+                <p class="p-component">储氢剩余量</p>
+            </el-col>
+            <el-col :span="6">
+                <p class="p-component">储氢剩余比</p>
+            </el-col>
+        </el-row>
+        <div v-for="item in formatData">
+            <el-row>
+                <el-col :span="12">
+                    <router-link :to="{name: 'fill second',params: { id: item.id, name: item.name }}">
+                        <p class="p-left" ref="productionName">{{ item.name }}</p>
+                    </router-link>
+                </el-col>
+                <el-col :span="6">
+                    <p class="p-component t-gold-number">{{ item.remain }} <span>kg</span></p>
+                </el-col>
+                <el-col :span="6">
+                    <p class="p-component t-gold-number">{{ item.remainRate }} <span>%</span></p>
+                </el-col>
+            </el-row>
+        </div>
+    </element-border>
+</template>
+
+<script>
+import {mapState} from "vuex"
+
+export default {
+    name: "FillHydrogenList",
+    data() {
+        return {
+            fillRemainList: [
+                {
+                    name: "京辉加氢站",
+                    remain: 0,
+                    remainRate: 0
+                }, {
+                    name: 'test2',
+                    remain: 0,
+                    remainRate: 0
+                }, {
+                    name: 'test3',
+                    remain: 0,
+                    remainRate: 0
+                }
+            ]
+        }
+    },
+    computed: {
+        ...mapState(["stateMapData"]),
+        formatData() {
+            let result = [];
+            this.stateMapData.station.forEach(i => {
+                result.push({
+                    name: i.name,
+                    id: i.id,
+                    remain: 0,
+                    remainRate: 0
+                })
+            })
+            return result;
+        }
+    }
+}
+</script>
+<style scoped>
+.p-left {
+    font-size: 18px;
+    height: auto;
+    line-height: 40px;
+    text-align: left;
+    word-break: break-all;
+    padding-left: 1rem;
+}
+</style>

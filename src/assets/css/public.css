@@ -1,0 +1,139 @@
+p {
+    word-break: break-all;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.main {
+    height: 720px;
+}
+
+.alarm-text {
+    color: red;
+    font-family: "Number", serif;
+    letter-spacing: 4px;
+}
+
+.component-border {
+    box-shadow: 0 0 6px inset aqua;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.component-border-white {
+    box-shadow: 0 0 6px inset white;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.alarm-border {
+    box-shadow: 0 0 6px inset orange;
+    border-radius: 6px;
+}
+
+.title-border-aqua {
+    color: gold;
+    font-family: "Number", serif;
+    letter-spacing: 4px;
+    border-bottom: 1px solid aqua;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.height-180 {
+    height: 180px;
+}
+
+.height-200 {
+    height: 200px;
+}
+
+.footer-height {
+    height: 230px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.t-green {
+    color: #0bff91;
+}
+
+.t-gray {
+    color: gray;
+}
+
+.t-aqua {
+    color: aqua;
+}
+
+.p-component {
+    font-size: 18px;
+    height: auto;
+    line-height: 40px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.p-component-min {
+    font-size: 14px;
+    height: auto;
+    line-height: 40px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.t-gold-number {
+    color: gold;
+    font-family: "Number", serif;
+    letter-spacing: 4px;
+}
+
+.font-number {
+    font-family: "Number", serif;
+    letter-spacing: 4px;
+    color: aqua;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+a:focus {
+    color: white;
+    text-decoration: none;
+}
